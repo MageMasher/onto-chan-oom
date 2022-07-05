@@ -1,10 +1,8 @@
 {:paths ["src"]
  :deps {org.clojure/core.async {:mvn/version "1.5.648"}}
  :aliases {:repro {:exec-fn onto-chan-oom/repro}
-           :repro2 {:exec-fn onto-chan-oom/repro2}
            :const {:exec-fn onto-chan-oom/const}
            :nopro {:exec-fn onto-chan-oom/nopro}
-           :fix {:exec-fn onto-chan-oom/fix}
            :Xmx128m {:jvm-opts ["-Xmx128m"]}
            :Xmx256m {:jvm-opts ["-Xmx256m"]}
            :yourkit {:jvm-opts ["-agentpath:/Applications/YourKit-Java-Profiler-2022.3.app/Contents/Resources/bin/mac/libyjpagent.dylib=snapshot_name_format={sessionname}-{datetime},sessionname=onto-chan-oom,onexit=memory"]}}}
